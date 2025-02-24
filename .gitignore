@@ -1,0 +1,19 @@
+.vscode/
+.settings/
+
+# STM32 CubeMX CMake project files
+Drivers/
+Middlewares/
+
+build/
+cmake/
+.mxproject
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+build.ninja
+*.cproject
+*.project
+*.mxproject
+CMakePresets.json
+compile_commands.json
