@@ -73,6 +73,10 @@ void Error_Handler(void);
 #define LED_GREEN_GPIO_Port GPIOC
 #define LED_RED_Pin GPIO_PIN_2
 #define LED_RED_GPIO_Port GPIOC
+#define MODE0_Pin GPIO_PIN_4
+#define MODE0_GPIO_Port GPIOC
+#define MODE1_Pin GPIO_PIN_5
+#define MODE1_GPIO_Port GPIOC
 #define PULSE_4P_Pin GPIO_PIN_7
 #define PULSE_4P_GPIO_Port GPIOE
 #define PULSE_5N_Pin GPIO_PIN_8
@@ -91,13 +95,18 @@ void Error_Handler(void);
 #define PULSE_8N_GPIO_Port GPIOE
 #define PULSE_8P_Pin GPIO_PIN_15
 #define PULSE_8P_GPIO_Port GPIOE
+#define KEY_BOOT0_Pin GPIO_PIN_8
+#define KEY_BOOT0_GPIO_Port GPIOB
+#define KEY_BOOT0_EXTI_IRQn EXTI9_5_IRQn
 #define PULSE_1N_Pin GPIO_PIN_0
 #define PULSE_1N_GPIO_Port GPIOE
 #define PULSE_1P_Pin GPIO_PIN_1
 #define PULSE_1P_GPIO_Port GPIOE
 
 /* USER CODE BEGIN Private defines */
-
+#define LED_GPIO_Port GPIOC
+#define PULSE_GPIO_Port GPIOE
+#define MODE_GPIO_Port GPIOC
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
