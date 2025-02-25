@@ -56,7 +56,8 @@
 
 /* External variables --------------------------------------------------------*/
 extern DMA_HandleTypeDef hdma_tim2_up;
-extern TIM_HandleTypeDef htim17;
+extern TIM_HandleTypeDef htim5;
+extern TIM_HandleTypeDef htim7;
 
 /* USER CODE BEGIN EV */
 
@@ -229,17 +230,31 @@ void EXTI9_5_IRQHandler(void)
 }
 
 /**
-  * @brief This function handles TIM1 trigger and commutation interrupts and TIM17 global interrupt.
+  * @brief This function handles TIM5 global interrupt.
   */
-void TIM1_TRG_COM_TIM17_IRQHandler(void)
+void TIM5_IRQHandler(void)
 {
-  /* USER CODE BEGIN TIM1_TRG_COM_TIM17_IRQn 0 */
+  /* USER CODE BEGIN TIM5_IRQn 0 */
 
-  /* USER CODE END TIM1_TRG_COM_TIM17_IRQn 0 */
-  HAL_TIM_IRQHandler(&htim17);
-  /* USER CODE BEGIN TIM1_TRG_COM_TIM17_IRQn 1 */
+  /* USER CODE END TIM5_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim5);
+  /* USER CODE BEGIN TIM5_IRQn 1 */
 
-  /* USER CODE END TIM1_TRG_COM_TIM17_IRQn 1 */
+  /* USER CODE END TIM5_IRQn 1 */
+}
+
+/**
+  * @brief This function handles TIM7 global interrupt, DAC2 and DAC4 channel underrun error interrupts.
+  */
+void TIM7_DAC_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM7_DAC_IRQn 0 */
+
+  /* USER CODE END TIM7_DAC_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim7);
+  /* USER CODE BEGIN TIM7_DAC_IRQn 1 */
+
+  /* USER CODE END TIM7_DAC_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */
