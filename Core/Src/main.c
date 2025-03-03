@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "adc.h"
 #include "dma.h"
 #include "tim.h"
 #include "usart.h"
@@ -111,8 +112,12 @@ int main(void)
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_TIM2_Init();
-  MX_USART1_UART_Init();
   MX_TIM5_Init();
+  MX_ADC1_Init();
+  MX_ADC2_Init();
+  MX_ADC3_Init();
+  MX_ADC5_Init();
+  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
   MAX14808_Init();
   MAX14808_SetMode(MAX14808_MODE_OCTAL_THREE_LEVEL);
@@ -203,7 +208,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     HAL_GPIO_TogglePin(LED_GPIO_Port, LED_GREEN_Pin);
   }
   /* USER CODE END Callback 0 */
-  if (htim->Instance == TIM7) {
+  if (htim->Instance == TIM7)
+  {
     HAL_IncTick();
   }
   /* USER CODE BEGIN Callback 1 */

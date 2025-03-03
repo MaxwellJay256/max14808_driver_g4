@@ -61,10 +61,10 @@ void MX_GPIO_Init(void)
                           |PULSE_8N_Pin|PULSE_8P_Pin|PULSE_1N_Pin|PULSE_1P_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, LED_BLUE_Pin|MODE0_Pin|MODE1_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, LED_BLUE_Pin|LED_GREEN_Pin|LED_RED_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, LED_GREEN_Pin|LED_RED_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOC, MODE0_Pin|MODE1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : PULSE_2N_Pin PULSE_2P_Pin PULSE_3N_Pin PULSE_3P_Pin
                            PULSE_4N_Pin PULSE_4P_Pin PULSE_5N_Pin PULSE_5P_Pin
