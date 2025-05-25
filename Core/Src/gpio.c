@@ -39,6 +39,7 @@
         * EVENT_OUT
         * EXTI
      PG10-NRST   ------> RCC_MCO
+     PA8   ------> ADC5_IN1
 */
 void MX_GPIO_Init(void)
 {
@@ -100,6 +101,12 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PA8 */
+  GPIO_InitStruct.Pin = GPIO_PIN_8;
+  GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pin : KEY_BOOT0_Pin */
   GPIO_InitStruct.Pin = KEY_BOOT0_Pin;

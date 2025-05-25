@@ -116,12 +116,12 @@ int main(void)
   MX_ADC1_Init();
   MX_ADC2_Init();
   MX_ADC3_Init();
-  MX_ADC5_Init();
   MX_USART1_UART_Init();
+  MX_ADC4_Init();
   /* USER CODE BEGIN 2 */
   MAX14808_Init();
   MAX14808_SetMode(MAX14808_MODE_OCTAL_THREE_LEVEL);
-  HAL_TIM_Base_Start_IT(&htim5);  
+  HAL_TIM_Base_Start_IT(&htim5);
   /* USER CODE END 2 */
 
   /* Infinite loop */
